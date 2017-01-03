@@ -51,7 +51,7 @@ namespace StructuredLogging.Client
             }
         }
 
-        public async void CreateAsync(RawEvents rawEvents)
+        public async Task CreateAsync(RawEvents rawEvents)
         {
             // url: /api/events/
             string url = $"{_baseUrl}/{Constants.RoutePrefix}/{Constants.RouteEvents}";

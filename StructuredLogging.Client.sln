@@ -7,6 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuredLogging.Client", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuredLogging.Client.Sample", "StructuredLogging.Client.Sample\StructuredLogging.Client.Sample.csproj", "{7D279271-202B-4F1E-9B6C-F433D8A350A9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{13FCC91E-5B4E-4FED-A206-ADE1EB582B08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "log4net", "log4net", "{839BAF6C-413B-493E-A4E2-D7E04D47EFA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuredLogging.Client.Log4Net", "StructuredLogging.Client.Log4Net\StructuredLogging.Client.Log4Net.csproj", "{E215EE06-7953-4A23-8553-22D3A17185B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuredLogging.Client.Log4Net.Sample", "StructuredLogging.Client.Log4Net.Sample\StructuredLogging.Client.Log4Net.Sample.csproj", "{EEEEF407-4E57-46BA-9BD5-A6D9F8AFA9CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +29,21 @@ Global
 		{7D279271-202B-4F1E-9B6C-F433D8A350A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D279271-202B-4F1E-9B6C-F433D8A350A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D279271-202B-4F1E-9B6C-F433D8A350A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E215EE06-7953-4A23-8553-22D3A17185B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E215EE06-7953-4A23-8553-22D3A17185B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E215EE06-7953-4A23-8553-22D3A17185B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E215EE06-7953-4A23-8553-22D3A17185B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEEEF407-4E57-46BA-9BD5-A6D9F8AFA9CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEEEF407-4E57-46BA-9BD5-A6D9F8AFA9CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEEEF407-4E57-46BA-9BD5-A6D9F8AFA9CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEEEF407-4E57-46BA-9BD5-A6D9F8AFA9CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{839BAF6C-413B-493E-A4E2-D7E04D47EFA8} = {13FCC91E-5B4E-4FED-A206-ADE1EB582B08}
+		{E215EE06-7953-4A23-8553-22D3A17185B3} = {839BAF6C-413B-493E-A4E2-D7E04D47EFA8}
+		{EEEEF407-4E57-46BA-9BD5-A6D9F8AFA9CE} = {839BAF6C-413B-493E-A4E2-D7E04D47EFA8}
 	EndGlobalSection
 EndGlobal
