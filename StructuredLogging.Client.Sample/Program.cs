@@ -10,15 +10,17 @@ namespace StructuredLogging.Client.Sample
     {
         static void Main()
         {
+            var percentage = new Random().NextDouble();
+
             var rawEvent = new RawEvent
             {
-                Timestamp = new DateTime(2017, 1, 1, 15, 12, 38).ToString("O"),
+                Timestamp = DateTime.Now.ToString("O"),
                 Level = "Verbose",
                 MessageTemplate = "CPU usage is {CpuPercentage:P2} on {MachineName}",
                 Properties = new Dictionary<string, object>
                 {
-                    { "CpuPercentage", 0.18 },
-                    { "MachineName", "nbherb-rmbp" }
+                    { "CpuPercentage", percentage },
+                    { "MachineName", Environment.MachineName }
                 }
             };
 
