@@ -27,6 +27,7 @@ namespace StructuredLogging.Client.Sample
 
             try
             {
+                Console.WriteLine("Posting dummy event.");
                 client.CreateAsync(rawEvent);
             }
             catch (Exception ex)
@@ -34,6 +35,7 @@ namespace StructuredLogging.Client.Sample
                 Console.WriteLine(ex);
             }
 
+            Console.WriteLine("Press ANY key to quit.");
             Console.ReadKey();
         }
 
