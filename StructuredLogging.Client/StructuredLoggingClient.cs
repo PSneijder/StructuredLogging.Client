@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using StructuredLogging.Client.Models;
 
@@ -30,7 +31,7 @@ namespace StructuredLogging.Client
             ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, sslPolicyErrors) => true;
         }
 
-        public async void CreateAsync(RawEvent rawEvent)
+        public async Task CreateAsync(RawEvent rawEvent)
         {
             // url: /api/event/
             string url = $"{_baseUrl}/{Constants.RoutePrefix}/{Constants.RouteEvent}";

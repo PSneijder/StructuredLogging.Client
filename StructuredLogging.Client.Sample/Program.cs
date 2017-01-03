@@ -28,7 +28,7 @@ namespace StructuredLogging.Client.Sample
             try
             {
                 Console.WriteLine("Posting dummy event.");
-                client.CreateAsync(rawEvent);
+                client.CreateAsync(rawEvent).GetAwaiter();
             }
             catch (Exception ex)
             {
