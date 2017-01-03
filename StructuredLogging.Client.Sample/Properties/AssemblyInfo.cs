@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("StructuredLogging.Client")]
+[assembly: AssemblyTitle("StructuredLogging.Client.Sample")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("StructuredLogging.Client")]
+[assembly: AssemblyProduct("StructuredLogging.Client.Sample")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9f625d85-caea-4b43-a52c-f0c0d7599e8c")]
+[assembly: Guid("7d279271-202b-4f1e-9b6c-f433d8a350a9")]
 
 // Version information for an assembly consists of the following four values:
 //
