@@ -1,17 +1,19 @@
 ﻿using System;
+using NLog;
+using NLog.Targets;
 using System.Configuration;
-using log4net.Appender;
-using log4net.Core;
-using StructuredLogging.Client.Log4Net.Extensions;
+using System.Net;
 using StructuredLogging.Client.Models;
+using StructuredLogging.Client.NLog.Extensions;
 
-namespace StructuredLogging.Client.Log4Net
+namespace StructuredLogging.Client.NLog
 {
-    public sealed class StructuredLoggingAppender
-        : BufferingAppenderSkeleton
+    [Target("StructuredLogging")]
+    public sealed class StructuredLoggingTarget
+        : Target
     {
-        private StructuredLoggingClient _client;
         private string _serverUrl;
+        private StructuredLoggingClient _client;
 
         public string ServerUrl
         {
@@ -35,18 +37,18 @@ namespace StructuredLogging.Client.Log4Net
                 }
             }
         }
-        
-        protected override void SendBuffer(LoggingEvent[] events)
+
+        protected override void Write(LogEventInfo logEvent)
         {
-            RawEvents rawEvents = events.ToRawEvents();
+            RawEvent rawEvent = logEvent.ToRawEvents();
 
             try
             {
-                _client.CreateAsync(rawEvents).GetAwaiter();
+                _client.CreateAsync(rawEvent).GetAwaiter();
             }
             catch (Exception ex)
             {
-                ErrorHandler.Error(ex.Message);
+                throw new WebException(ex.Message, ex);
             }
         }
     }
